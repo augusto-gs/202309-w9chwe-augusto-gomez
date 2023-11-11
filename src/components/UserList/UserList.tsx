@@ -3,7 +3,7 @@ import { loadUsers } from "../../store/features/userSlice/userSlice";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import UserCard from "../UserCard/UserCard";
 import UserListStyled from "./UserListStyled";
-import useUserApi from "../../hooks/userUserApi/UseUserApi";
+import useUserApi from "../../hooks/userUserApi/useUserApi";
 
 const UserList = (): React.ReactElement => {
   const { getUsersApi } = useUserApi();
