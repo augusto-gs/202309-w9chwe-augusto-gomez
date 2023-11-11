@@ -14,9 +14,7 @@ export const userSlice = createSlice({
     loadUsers: (
       currentState: UsersStructure,
       action: PayloadAction<Users[]>,
-    ) => {
-      ({ ...currentState, users: action.payload });
-    },
+    ): UsersStructure => ({ ...currentState, users: action.payload }),
   },
 });
 
