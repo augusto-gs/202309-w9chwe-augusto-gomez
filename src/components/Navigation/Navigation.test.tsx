@@ -1,7 +1,7 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { BrowserRouter } from "react-router-dom";
 import App from "../App/App";
+import customRender from "../../mocks/utils/testUtils";
 
 describe("Given a Navigation component", () => {
   describe("When it receives a click on the Home navigation link", () => {
@@ -9,11 +9,7 @@ describe("Given a Navigation component", () => {
       const user = userEvent.setup();
       const homePageTitle = "Community Social Media";
 
-      render(
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>,
-      );
+      customRender(<App />);
 
       const homeNavLink = screen.getByTitle("Home");
       const title = screen.getByRole("heading", { name: homePageTitle });

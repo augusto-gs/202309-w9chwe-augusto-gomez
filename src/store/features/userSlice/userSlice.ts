@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { Users } from "./types";
 
-interface UsersStructure {
+export interface UsersStructure {
   users: Users[];
 }
 
@@ -19,3 +19,5 @@ export const userSlice = createSlice({
 });
 
 export const { loadUsers } = userSlice.actions;
+
+export const usersReducer = userSlice.reducer;
