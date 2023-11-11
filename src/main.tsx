@@ -6,16 +6,20 @@ import mainTheme from "./styles/mainTheme";
 import GlobalStyle from "./styles/GlobalStyle";
 import Container from "./styles/Container/Container";
 import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "./store";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider theme={mainTheme}>
-      <GlobalStyle />
-      <BrowserRouter>
-        <Container>
-          <App />
-        </Container>
-      </BrowserRouter>
+      <Provider store={store}>
+        <GlobalStyle />
+        <BrowserRouter>
+          <Container>
+            <App />
+          </Container>
+        </BrowserRouter>
+      </Provider>
     </ThemeProvider>
   </React.StrictMode>,
 );
