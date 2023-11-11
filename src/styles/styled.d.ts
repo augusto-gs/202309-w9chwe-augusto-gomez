@@ -7,6 +7,8 @@ declare module "styled-components" {
       primary: string;
       secondary: string;
       dark: string;
+      friend: string;
+      enemy: string;
     };
 
     typography: {
