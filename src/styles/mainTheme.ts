@@ -6,6 +6,7 @@ const mainTheme: DefaultTheme = {
     background: "#D81159",
     primary: "#FFBC42",
     secondary: "#218380",
+    dark: "#000",
   },
 
   typography: {
