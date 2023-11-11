@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import users from "../../data/users";
 import { loadUsers } from "../../store/features/userSlice/userSlice";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import UserCard from "../UserCard/UserCard";
+import UserListStyled from "./UserListStyled";
 
 const UserList = (): React.ReactElement => {
   const usersState = useAppSelector((state) => state.usersState);
@@ -13,11 +15,13 @@ const UserList = (): React.ReactElement => {
   }, [dispatch]);
 
   return (
-    <ul className="user-list">
+    <UserListStyled className="user-list ">
       {usersState.users.map((user) => (
-        <li key={user.id}>{user.name}</li>
+        <li key={user.id}>
+          <UserCard user={user} />
+        </li>
       ))}
-    </ul>
+    </UserListStyled>
   );
 };
 

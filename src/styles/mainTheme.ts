@@ -7,6 +7,8 @@ const mainTheme: DefaultTheme = {
     primary: "#FFBC42",
     secondary: "#218380",
     dark: "#000",
+    enemy: "#E54F6D",
+    friend: "#4381C1",
   },
 
   typography: {
