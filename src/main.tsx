@@ -5,14 +5,17 @@ import { ThemeProvider } from "styled-components";
 import mainTheme from "./styles/mainTheme";
 import GlobalStyle from "./styles/GlobalStyle";
 import Container from "./styles/Container/Container";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider theme={mainTheme}>
       <GlobalStyle />
-      <Container>
-        <App />
-      </Container>
+      <BrowserRouter>
+        <Container>
+          <App />
+        </Container>
+      </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>,
 );

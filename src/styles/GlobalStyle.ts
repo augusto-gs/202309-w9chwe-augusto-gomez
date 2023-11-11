@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
   body
   {
     margin: 0;
-    background-color: ${({ theme }) => theme.colors.background}
+    background-color: ${({ theme }) => theme.colors.secondary}
   }
 
   h1, h2 {
@@ -38,6 +38,11 @@ const GlobalStyle = createGlobalStyle`
 
   input {
     all: unset
+  }
+
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.dark}
   }
 
 `;
