@@ -3,7 +3,7 @@ import NavigationStyled from "./NavigationStyled";
 
 const Navigation = () => (
   <NavigationStyled className="navigation-bar">
-    <NavLink className="navigation-bar__home" to={"/home"}>
+    <NavLink title="Home" className="navigation-bar__home" to={"/home"}>
       Home
     </NavLink>
     <NavLink to={"/add-user"}></NavLink>
