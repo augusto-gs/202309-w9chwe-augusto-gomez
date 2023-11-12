@@ -26,9 +26,14 @@ export const userSlice = createSlice({
         isFriend: user.id === action.payload ? !user.isFriend : user.isFriend,
       })),
     }),
+
+    addNewUser: (
+      currentState: UsersStructure,
+      action: PayloadAction<Users>,
+    ) => ({ ...currentState, users: [...currentState.users, action.payload] }),
   },
 });
 
-export const { loadUsers, setFriendStatus } = userSlice.actions;
+export const { loadUsers, setFriendStatus, addNewUser } = userSlice.actions;
 
 export const usersReducer = userSlice.reducer;

@@ -1,5 +1,6 @@
 import { DefaultTheme } from "styled-components/dist/types";
 import "@fontsource/ibm-plex-mono";
+import "@fontsource/merriweather";
 
 const mainTheme: DefaultTheme = {
   colors: {

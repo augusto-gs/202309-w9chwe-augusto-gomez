@@ -8,13 +8,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    font-family: ${({ theme }) => theme.typography.main}
+     font-family: ${({ theme }) => theme.typography.main}
   }
-
+  
   body
   {
     margin: 0;
-    background-color: ${({ theme }) => theme.colors.background}
+    background-color: ${({ theme }) => theme.colors.background};
   }
 
   h1, h2 {
@@ -37,7 +37,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   input {
-    all: unset
+    border: none;
+    text-decoration: none;
   }
 
   a {
