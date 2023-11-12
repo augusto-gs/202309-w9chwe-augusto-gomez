@@ -24,13 +24,13 @@ const UserCardStyled = styled.article`
     }
 
     &__friend-background {
-      background-color: ${({ theme }) => theme.colors.friend};
+      background-color: ${({ theme }) => theme.colors.secondary};
       padding: 5px 0 15px;
       border-radius: 33px;
     }
 
     &__enemy-background {
-      background-color: ${({ theme }) => theme.colors.enemy};
+      background-color: ${({ theme }) => theme.colors.friend};
       padding: 5px 0 15px;
       border-radius: 33px;
     }
