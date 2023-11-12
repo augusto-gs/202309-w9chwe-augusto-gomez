@@ -56,7 +56,7 @@ const AddUserForm = () => {
         />
       </label>
       <label htmlFor="surname" className="form__label">
-        Surname
+        Surname{" "}
         <input
           type="text"
           className="form__control"
@@ -76,7 +76,7 @@ const AddUserForm = () => {
         />
       </label>
       <label htmlFor="sex" className="form__label">
-        Sex
+        Sex{" "}
         <input
           type="text"
           className="form__control"
@@ -86,7 +86,7 @@ const AddUserForm = () => {
         />
       </label>
       <label htmlFor="occupation" className="form__label">
-        Occupation
+        Occupation{" "}
         <input
           type="text"
           className="form__control"
@@ -96,7 +96,7 @@ const AddUserForm = () => {
         />
       </label>
       <label htmlFor="imageUrl" className="form__label">
-        Image URL
+        Image URL{" "}
         <input
           type="text"
           className="form__control"
@@ -106,7 +106,7 @@ const AddUserForm = () => {
         />
       </label>
       <label htmlFor="isFriend" className="form__label">
-        Are they your friend?
+        Are they your friend?{""}
         <input
           type="checkbox"
           className="form__control"

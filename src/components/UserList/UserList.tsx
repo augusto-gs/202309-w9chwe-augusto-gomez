@@ -15,7 +15,7 @@ const UserList = (): React.ReactElement => {
   useEffect(() => {
     (async () => {
       const users = await getUsersApi();
-      dispatch(await loadUsers(users));
+      dispatch(loadUsers(users));
     })();
   }, [dispatch, getUsersApi]);
 
