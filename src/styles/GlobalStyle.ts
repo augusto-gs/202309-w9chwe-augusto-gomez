@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
   body
   {
     margin: 0;
-    background-color: ${({ theme }) => theme.colors.secondary}
+    background-color: ${({ theme }) => theme.colors.background}
   }
 
   h1, h2 {

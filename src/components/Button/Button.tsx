@@ -1,3 +1,5 @@
+import ButtonStyled from "./ButtonStyled";
+
 interface ButtonProps {
   actionOnClick: () => void;
   type: "submit" | "button";
@@ -9,9 +11,9 @@ const Button = ({
   type,
   text,
 }: ButtonProps): React.ReactElement => (
-  <button className="button" onClick={actionOnClick} type={type}>
+  <ButtonStyled className="button" onClick={actionOnClick} type={type}>
     {text}
-  </button>
+  </ButtonStyled>
 );
 
 export default Button;
