@@ -7,7 +7,7 @@ const AddUserFormStyled = styled.form`
   margin-top: 30px;
   background-color: ${({ theme }) => theme.colors.secondary};
   border-radius: 33px;
-  padding: 10px;
+  padding: 17px;
 
   .form {
     &__label {
@@ -20,6 +20,9 @@ const AddUserFormStyled = styled.form`
       background-color: ${({ theme }) => theme.colors.primary};
       accent-color: ${({ theme }) => theme.colors.primary};
       font-family: ${({ theme }) => theme.typography.secondary};
+      width: 56%;
+      border-radius: 33px;
+      max-width: 150px;
     }
   }
 
