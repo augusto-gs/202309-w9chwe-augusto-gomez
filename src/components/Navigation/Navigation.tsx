@@ -11,7 +11,13 @@ const Navigation = () => (
     >
       Home
     </NavLink>
-    <NavLink aria-label="Add user" to={"/add-user"}></NavLink>
+    <NavLink
+      aria-label="Add user link"
+      to={"/add-user"}
+      className="navigation-bar__add-user"
+    >
+      Add user
+    </NavLink>
   </NavigationStyled>
 );
 
