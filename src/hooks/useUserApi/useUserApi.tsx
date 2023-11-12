@@ -10,7 +10,16 @@ const useUserApi = () => {
     return users;
   }, []);
 
-  return { getUsersApi };
+  const changeUserFriendStatus = useCallback(async (user: Users) => {
+    const changedUser = axios.patch<Users>(`/items/${user.id}`, {
+      ...user,
+      isFriend: !user.isFriend,
+    });
+
+    return changedUser;
+  }, []);
+
+  return { getUsersApi, changeUserFriendStatus };
 };
 
 export default useUserApi;

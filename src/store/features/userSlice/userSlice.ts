@@ -15,9 +15,20 @@ export const userSlice = createSlice({
       currentState: UsersStructure,
       action: PayloadAction<Users[]>,
     ): UsersStructure => ({ ...currentState, users: action.payload }),
+
+    setFriendStatus: (
+      currentState: UsersStructure,
+      action: PayloadAction<number>,
+    ): UsersStructure => ({
+      ...currentState,
+      users: currentState.users.map((user) => ({
+        ...user,
+        isFriend: user.id === action.payload ? !user.isFriend : user.isFriend,
+      })),
+    }),
   },
 });
 
-export const { loadUsers } = userSlice.actions;
+export const { loadUsers, setFriendStatus } = userSlice.actions;
 
 export const usersReducer = userSlice.reducer;
