@@ -7,10 +7,10 @@ export const handlers = [
     return HttpResponse.json(usersMock);
   }),
 
-  http.patch(`${import.meta.env.VITE_API_URL}/1`, () => {
+  http.patch(`${import.meta.env.VITE_API_URL}/items/1`, () => {
     return HttpResponse.json({
       ...userMock,
-      hasBeenSeen: !userMock.isFriend,
+      isFriend: !userMock.isFriend,
     });
   }),
 ];

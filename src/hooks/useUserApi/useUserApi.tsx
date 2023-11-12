@@ -11,14 +11,12 @@ const useUserApi = () => {
   }, []);
 
   const changeUserFriendStatus = useCallback(async (user: Users) => {
-    const { then } = axios.patch<Users>(`/items/${user.id}`, {
+    const changedUser = axios.patch<Users>(`/items/${user.id}`, {
       ...user,
       isFriend: !user.isFriend,
     });
 
-    const response = then((response) => response);
-
-    return response;
+    return changedUser;
   }, []);
 
   return { getUsersApi, changeUserFriendStatus };
