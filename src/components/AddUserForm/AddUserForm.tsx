@@ -5,10 +5,12 @@ import AddUserFormStyled from "./AddUserFormStyled";
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../../store/hooks";
 import { addNewUser } from "../../store/features/userSlice/userSlice";
+import useUserApi from "../../hooks/useUserApi/useUserApi";
 
 const AddUserForm = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
+  const { addUserApi } = useUserApi();
 
   const emptyUser: Users = {
     name: "",
@@ -33,9 +35,9 @@ const AddUserForm = () => {
     }));
   };
 
-  const onFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const onFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event?.preventDefault();
-
+    await addUserApi(newUser);
     dispatch(addNewUser(newUser));
 
     navigate("/");

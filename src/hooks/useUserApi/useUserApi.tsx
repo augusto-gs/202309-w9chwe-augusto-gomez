@@ -19,7 +19,12 @@ const useUserApi = () => {
     return changedUser;
   }, []);
 
-  return { getUsersApi, changeUserFriendStatus };
+  const addUserApi = useCallback(async (user: Users) => {
+    const addedUser = axios.post<Users>("/items", user);
+    return addedUser;
+  }, []);
+
+  return { getUsersApi, changeUserFriendStatus, addUserApi };
 };
 
 export default useUserApi;

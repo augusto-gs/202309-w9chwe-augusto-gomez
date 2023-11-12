@@ -1,4 +1,5 @@
-export interface UsersWithoutId {
+export interface Users {
+  id: number;
   name: string;
   surname: string;
   age: number;
@@ -6,8 +7,4 @@ export interface UsersWithoutId {
   occupation: string;
   isFriend: boolean;
   imageUrl: string;
-}
-
-export interface Users extends UsersWithoutId {
-  id: number;
 }
