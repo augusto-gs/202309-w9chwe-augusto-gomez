@@ -5,6 +5,7 @@ export const HeaderStyled = styled.header`
     &__title {
       text-align: center;
       font-size: 50px;
+      font-family: ${({ theme }) => theme.typography.main};
     }
   }
 `;
