@@ -4,6 +4,7 @@ import Button from "../Button/Button";
 import UserCardStyled from "./UserCardStyled";
 import { useAppDispatch } from "../../store/hooks";
 import { setFriendStatus } from "../../store/features/userSlice/userSlice";
+import useUserApi from "../../hooks/useUserApi/useUserApi";
 
 interface UserCardProps {
   user: Users;
@@ -11,12 +12,15 @@ interface UserCardProps {
 
 const UserCard = ({
   user: { name, surname, age, imageUrl, occupation, sex, isFriend, id },
+  user,
 }: UserCardProps) => {
   const dispatch = useAppDispatch();
+  const { changeUserFriendStatus } = useUserApi();
 
-  const changeFriendStatus = useCallback(() => {
+  const changeFriendStatus = useCallback(async () => {
     dispatch(setFriendStatus(id));
-  }, [dispatch, id]);
+    await changeUserFriendStatus(user);
+  }, [changeUserFriendStatus, dispatch, id, user]);
 
   return (
     <UserCardStyled className={`card`}>
